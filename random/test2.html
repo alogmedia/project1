@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="da" dir="ltr">
+<head> <!-- Her definere jeg at det skal være UTF-8 charset som gør æ/ø/å osv virker
+Jeg definere også at den skal lede efter min style2.css som er der jeg koder hvordan siden skal se ud (farver/størelse på billeder/osv)-->
+<meta charset="utf-8">
+<title>Test2</title> <!-- titel man ser i fanebladet øverst -->
+<link rel="stylesheet" href="style2.css"> 
+</head>
+
+<body>
+<header> <!-- nu begynder jeg at arbejde på min header (Den lyserøde boks hvor der står "Meme projekt") -->
+		<div class="header-container"> <!-- Når jeg laver en div vil jeg beskrive det som en "Box" jeg kan gøre med hvad jeg vil, jeg kan gøre den større eller mindre eller smide noget ind i boksen og rykke rundt med det hele som jeg vil -->
+			<div id="left-content"><!-- når jeg definere en class eller id er det for at jeg kan refere til det i min style2.css, det kommer vi til om lidt!-->
+         		<h2 id="title">Meme Projekt</h2><!-- h2 er en headline(overskrift), de starter fra h1(størst i størelse og vigtigst for browseren/søgemaskiner), til h6 mener jeg det er(mindst i størelse og mindst vigtigt)-->
+    		</div>
+ 		<nav class="navigation"><!-- her vil jeg have en navigation-->
+            <ul class="navi"><!-- her laver jeg en liste over navigations punkter jeg gerne vil have-->
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="produkter.html">Produkter</a></li>
+                <li><a href="om-os.html">Om os</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+		</div>
+	</header>
+	<main><!-- her begynder mit "main content", der hvor jeg vil have alt min tekst, billeder og hvad jeg nu ellers vil fortælle de besøgende på hjemmesiden-->
+	<img class="img1" src="images/meme1.jpg" alt="meme"><!-- her bruger jeg et img tag som gør at jeg vil hente et billede et sted fra som skal vises på hjemmesiden
+i dette tilfælde ligger mit billede i en mappe der hedder images og billedet hedder meme1.jpg, alt attribut er for at fortælle eksempelvis søgemaskiner en beskrivelse af billedet.
+
+Du kan sagtens hente billeder direkte fra nettet ved eksempelvis at gøre sådan her:
+<img class="img1" src="https://minhjemmeside.dk/mitbillede.jpg" alt="meme"> 
+nu henter jeg et billede direkte fra en tilfældig hjemmeside i stedet for at henvise til et lokalt billede på min server/computer
+-->
+		<p class="tekst1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras libero quam, pellentesque id est quis, malesuada posuere leo. Mauris in auctor magna. Vestibulum sed leo at nunc euismod pellentesque eget in neque. Fusce ultricies pellentesque neque, in fringilla mi fermentum quis. Duis eu velit mi. Praesent dapibus risus vitae diam ullamcorper congue. Vestibulum mattis dolor in sapien volutpat, dignissim pellentesque erat consequat. Aliquam erat volutpat. Curabitur a condimentum tellus, fringilla euismod odio. Nunc mollis ligula mollis dignissim consectetur.
+		</p> <!-- p er en paragraph og indeholder tekst-->
+		<img class="img2" src="images/meme2.jpg" alt="meme"><p class="tekst2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras libero quam, pellentesque id est quis, malesuada posuere leo. Mauris in auctor magna. Vestibulum sed leo at nunc euismod pellentesque eget in neque. Fusce ultricies pellentesque neque, in fringilla mi fermentum quis. Duis eu velit mi. Praesent dapibus risus vitae diam ullamcorper congue. Vestibulum mattis dolor in sapien volutpat, dignissim pellentesque erat consequat. Aliquam erat volutpat. Curabitur a condimentum tellus, fringilla euismod odio. Nunc mollis ligula mollis dignissim consectetur.
+		</p>
+	</main>
+	<footer><!-- her er min footer/sidefod her kan jeg evt. skrive Copyright og/eller kontaktinfo osv osv.-->
+	</footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+* { /* jeg starter med at fortælle at margin/padding skal være: 0 
+	så det ikke forstyre mig senere hen at den giver nogen standard værdier(mærkeligt men sådan er det bare :D)*/
+  margin: 0;
+  padding: 0;
+}
+
+body {/* her giver jeg min body(hele hjemmesiden) en background-color(baggrunds farve) */
+	background-color: #52FFD5;
+}
+header { /* her siger jeg min header skal være 100% i bredde og højde og en anden baggrunds farve end body */
+	height: 100%;
+	width: 100%;
+	background-color: #EB00FF;
+}
+
+nav { /* her siger jeg min højde skal være automatisk og bredde skal være 100% og en anden baggrunds farve end body*/
+	height: auto;
+	width: 100%;
+	background-color:#FF0004;
+}
+
+
+.img1 { /* her skriver jeg mit billede skal holde sig til venstre og jeg vil kun have billedet skal have 20% bredde */
+	float:left;
+	width:20%;
+}
+
+.img2 { /* her skriver jeg mit billede skal holde sig til højre  og jeg vil kun have billedet skal have 20% bredde, jeg bruger også en margin-top for at skubbe billedet lidt ned, når man skriver margin-top skubber man elementet væk fra toppen */
+	float:right;
+	width:20%;
+	margin-top:25px;
+}
+
+.tekst1 { /* her giver jeg min font en anden størelse, en halvanden linjeafstand og en anden farve */
+	font-size:18px;
+	line-height: 1.5;
+	color: #171716;
+}
+
+.tekst2 { /* her gør jeg det samme som tekst1 */
+	font-size:18px;
+	line-height: 1.5;
+	margin-top:25px;
+	color: #171716;
+}
+
+

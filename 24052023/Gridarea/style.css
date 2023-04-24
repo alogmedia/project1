@@ -1,0 +1,84 @@
+html, body { /* Sætter højden på HTML og BODY til 100% og fjerner margenerne. */
+    height: 100%;
+    margin: 0;
+}
+
+.grid-container { 
+    /* Opretter en grid-container med grid-template-areas og grid-template-rows, 
+    og sætter grid-gap, baggrundsfarve og padding. 
+    Giver også containeren en min-height med en formel, der trækker to gange 10px fra 100% for at undgå, 
+    at containeren bliver for stor. */
+  display: grid;
+  grid-template-areas:
+  'header header header header header header'
+  'menu main main main main right'
+  'footer footer footer footer footer footer';
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  min-height: calc(100% - (2 * 10px));
+}
+
+.grid-container > div {
+    /* Sætter baggrundsfarven, 
+    tekstjusteringen, padding og skriftstørrelsen for alle elementer i grid-container. */
+  background-color: rgba(181, 137, 137, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+nav.headmenu ul {
+    list-style: none;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    display: flex;
+  }
+  
+nav.headmenu li {
+    margin-right: 10px;
+  }
+  
+nav.headmenu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .item1 { 
+    grid-area: header; 
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    grid-row: 1 / 2;
+    align-self: center;
+  }
+
+  section { 
+    grid-area: menu;
+    height: auto;
+  }
+  
+  .item3 { 
+    grid-area: main; 
+    height: auto;
+  }
+  
+  .item4 { 
+    grid-area: right; 
+    height: auto;
+  }
+  
+  .item5 { 
+    grid-area: footer; 
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    grid-row: 3 / 4;
+    align-self: center;
+  }

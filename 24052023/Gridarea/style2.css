@@ -3,13 +3,24 @@ body {
     display: grid;
 /* Angiver antallet af kolonner og rækker, 
 der skal bruges, og størrelsen af en fraktion af den tilgængelige plads i grid-containeren */
-    grid-template-columns: repeat(1, 1fr);
+
+/*"grid-template-columns" betyder at vi definerer kolonner i vores grid.
+
+"repeat(6, 1fr)" betyder at vi vil gentage kolonnen 6 gange, og at hver kolonne 
+skal have en bredde på 1 fraktion af det samlede tilgængelige plads.
+
+Så, hvis du kan forestille dig et stykke papir, 
+så er det som at sige "Vi vil dele dette papir op i 6 lige store kolonner". 
+Det hjælper computeren med at vide, hvordan den skal placere elementer på siden, 
+så de ser godt ud og er organiseret på en måde, som vi ønsker.
+*/
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto auto auto;
 /* Angiver placeringen af elementerne i grid-containeren */
     grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    'header header header header header header'
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
 /* Angiver afstanden mellem elementerne */
     grid-gap: 10px;
 /* Angiver baggrundsfarven */
@@ -25,14 +36,26 @@ grid-area: header;
 }
 
 /* Angiver, at main-elementet 
+skal tage plads i grid-area 'menu' */
+menu.item2 {
+    grid-area: menu;
+    }
+
+/* Angiver, at main-elementet 
 skal tage plads i grid-area 'main' */
-main.item2 {
+main.item3 {
 grid-area: main;
 }
 
+/* Angiver, at main-elementet 
+skal tage plads i grid-area 'aside' */
+aside.items3 {
+    grid-area: right;
+    }
+
 /* Angiver, at footer-elementet 
 skal tage plads i grid-area 'footer' */
-footer.item3 {
+footer.item5 {
 grid-area: footer;
 }
 
@@ -48,15 +71,15 @@ font-size: 30px;
 /* Anvender en anden layoutdefinition, hvis skærmstørrelsen er mindre end 600px */
 @media (max-width: 600px) {
 body {
-/* Angiver antallet af kolonner og rækker, der skal bruges, 
-og størrelsen af en fraktion af den tilgængelige plads i grid-containeren */
-grid-template-columns: repeat(1, 1fr);
-/* Angiver placeringen af elementerne i grid-containeren */
-grid-template-areas:
-'header'
-'main'
-'footer';
-}
+    /* Angiver antallet af kolonner og rækker, der skal bruges, 
+    og størrelsen af en fraktion af den tilgængelige plads i grid-containeren */
+    grid-template-columns: repeat(1, 1fr);
+    /* Angiver placeringen af elementerne i grid-containeren */
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    }
 }
 
 /* Angiver, at ul-elementet i nav-elementet med class 'headmenu' 
@@ -84,23 +107,26 @@ font-weight: bold;
 font-size: 18px;
 }
 
-		/* Blå baggrundsfarve for skærme 600px eller mindre */
-		@media screen and (max-width: 600px) {
-			body {
-				background-color: #0074D9;
-			}
-		}
 
-		/* Rød baggrundsfarve for skærme mellem 601px og 959px */
-		@media screen and (min-width: 601px) and (max-width: 959px) {
-			body {
-				background-color: #FF4136;
-			}
-		}
+/* Media Queries der angiver baggrundsfarver afhængigt af skærmstørrelsen /
 
-		/* Gul baggrundsfarve for skærme 960px eller større */
-		@media screen and (min-width: 960px) {
-			body {
-				background-color: #FFDC00;
-			}
-		}
+/* Blå baggrundsfarve for skærme 600px eller mindre */
+@media screen and (max-width: 600px) {
+	body {
+		background-color: #0074D9;
+	}
+}
+
+/* Rød baggrundsfarve for skærme mellem 601px og 959px */
+@media screen and (min-width: 601px) and (max-width: 959px) {
+	body {
+		background-color: #FF4136;
+	}
+}
+
+/* Gul baggrundsfarve for skærme 960px eller større */
+@media screen and (min-width: 960px) {
+	body {
+		background-color: #FFDC00;
+	}
+}

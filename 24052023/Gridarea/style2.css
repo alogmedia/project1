@@ -68,8 +68,8 @@ padding: 20px 0;
 font-size: 30px;
 }
 
-/* Anvender en anden layoutdefinition, hvis skærmstørrelsen er mindre end 600px */
-@media (max-width: 600px) {
+/* Anvender en anden layoutdefinition, hvis skærmstørrelsen er mindre end 550px */
+@media (max-width: 550px) {
 body {
     /* Angiver antallet af kolonner og rækker, der skal bruges, 
     og størrelsen af en fraktion af den tilgængelige plads i grid-containeren */

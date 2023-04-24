@@ -1,0 +1,106 @@
+/* Definerer grid til at blive anvendt til body */
+body {
+    display: grid;
+/* Angiver antallet af kolonner og rækker, 
+der skal bruges, og størrelsen af en fraktion af den tilgængelige plads i grid-containeren */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto;
+/* Angiver placeringen af elementerne i grid-containeren */
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+/* Angiver afstanden mellem elementerne */
+    grid-gap: 10px;
+/* Angiver baggrundsfarven */
+    background-color: #2196F3;
+/* Angiver polstringen rundt om elementerne */
+    padding: 10px;
+}
+
+/* Angiver, at header-elementet 
+skal tage plads i grid-area 'header' */
+header.item1 {
+grid-area: header;
+}
+
+/* Angiver, at main-elementet 
+skal tage plads i grid-area 'main' */
+main.item2 {
+grid-area: main;
+}
+
+/* Angiver, at footer-elementet 
+skal tage plads i grid-area 'footer' */
+footer.item3 {
+grid-area: footer;
+}
+
+/* Angiver baggrundsfarven, tekstjusteringen, 
+polstringen og skriftstørrelsen for alle børneelementer i body */
+body > * {
+background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}
+
+/* Anvender en anden layoutdefinition, hvis skærmstørrelsen er mindre end 600px */
+@media (max-width: 600px) {
+body {
+/* Angiver antallet af kolonner og rækker, der skal bruges, 
+og størrelsen af en fraktion af den tilgængelige plads i grid-containeren */
+grid-template-columns: repeat(1, 1fr);
+/* Angiver placeringen af elementerne i grid-containeren */
+grid-template-areas:
+'header'
+'main'
+'footer';
+}
+}
+
+/* Angiver, at ul-elementet i nav-elementet med class 'headmenu' 
+ikke skal have bullets, margin eller polstring, men at det skal vises som en fleksibel række */
+nav.headmenu ul {
+list-style: none;
+margin: 0;
+margin-left: 20px;
+padding: 0;
+display: flex;
+}
+
+/* Angiver, at li-elementerne i nav-elementet med class 'headmenu' 
+skal have en margen til højre på 10px */
+nav.headmenu li {
+margin-right: 10px;
+}
+
+/* Angiver, at a-elementerne i nav-elementet med class 'headmenu' 
+ikke skal have understregning, skal have farven #333, skal have fed skrifttype og skal have skriftstørrelsen 18px */
+nav.headmenu a {
+text-decoration: none;
+color: #333;
+font-weight: bold;
+font-size: 18px;
+}
+
+		/* Blå baggrundsfarve for skærme 600px eller mindre */
+		@media screen and (max-width: 600px) {
+			body {
+				background-color: #0074D9;
+			}
+		}
+
+		/* Rød baggrundsfarve for skærme mellem 601px og 959px */
+		@media screen and (min-width: 601px) and (max-width: 959px) {
+			body {
+				background-color: #FF4136;
+			}
+		}
+
+		/* Gul baggrundsfarve for skærme 960px eller større */
+		@media screen and (min-width: 960px) {
+			body {
+				background-color: #FFDC00;
+			}
+		}

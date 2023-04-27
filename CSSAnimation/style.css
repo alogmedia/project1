@@ -1,0 +1,17 @@
+@keyframes handwriting {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .skole-art {
+    font-family: Oswald;
+    font-size: 48px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: handwriting 3s linear forwards;
+  }
+  

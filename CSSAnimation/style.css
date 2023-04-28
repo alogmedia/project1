@@ -45,7 +45,7 @@ body {
 
 .box {
   width: 100px; /* width/height giver en bredde og højde på boxen */
-  height: 10px;
+  height: 16px;
   background-color: red; /* Giver en rød baggrund */
   margin-left: 40%;
   transition: width 2s ease; /* kan skrive sådan her for det giver lidt mere mening
@@ -56,6 +56,14 @@ body {
 
 .box:active { /* Når du holder musen inde på boxen aktiveres den og bliver den angivne width/height */
   width:330px;
+}
+
+.klikmig {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: cursive;
+  margin-left: 5px;
+  padding-top: 1px;
 }
 
 .tekst {

@@ -31,7 +31,7 @@
   font-size: 48px; /* font-size: angiver størrelsen på teksten */
   overflow: hidden; /* overflow: skjuler alt indhold, der går ud over elementets grænser */
   white-space: nowrap; /* white-space: angiver, at teksten ikke skal brydes på flere linjer */
-  animation: handwriting 3s linear forwards; /* animation: anvender keyframe animationen med en varighed på 3 sekunder, lineær tidslinje og afslutter med elementets sidste tilstand */
+  animation: handwriting 1s linear forwards; /* animation: anvender keyframe animationen med en varighed på 3 sekunder, lineær tidslinje og afslutter med elementets sidste tilstand */
 }
 
 .box {

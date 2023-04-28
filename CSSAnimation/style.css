@@ -2,17 +2,32 @@
 @keyframes handwriting {
     from {
       width: 0;
+      transform: translateX(0px) rotate(0deg);
     }
     to {
       width: 100%;
+      transform: translateX(40%) rotate(360deg);
     }
 }
   
-  /* Anvender cursive font-family med en størrelse på 48 pixels og skjuler alt tekst, der går ud over elementets bredde */
-  .skole-art {
-    font-family: cursive; /* font-family: vælger en skrifttype til teksten */
-    font-size: 48px; /* font-size: angiver størrelsen på teksten */
-    overflow: hidden; /* overflow: skjuler alt indhold, der går ud over elementets grænser */
-    white-space: nowrap; /* white-space: angiver, at teksten ikke skal brydes på flere linjer */
-    animation: handwriting 3s linear forwards; /* animation: anvender keyframe animationen med en varighed på 3 sekunder, lineær tidslinje og afslutter med elementets sidste tilstand */
-  }
+/* Anvender cursive font-family med en størrelse på 48 pixels og skjuler alt tekst, der går ud over elementets bredde */
+.skole-art {
+font-family: cursive; /* font-family: vælger en skrifttype til teksten */
+font-size: 48px; /* font-size: angiver størrelsen på teksten */
+overflow: hidden; /* overflow: skjuler alt indhold, der går ud over elementets grænser */
+white-space: nowrap; /* white-space: angiver, at teksten ikke skal brydes på flere linjer */
+animation: handwriting 3s linear forwards; /* animation: anvender keyframe animationen med en varighed på 3 sekunder, lineær tidslinje og afslutter med elementets sidste tilstand */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 1s ease-in;
+}
+
+.box:hover {
+  width:100%;
+  overflow: hidden;
+  background-color:blue;
+}

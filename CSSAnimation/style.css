@@ -1,8 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body {
+  background-color:bisque;
+}
+
 /* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% */
-@keyframes handwriting {
+@keyframes rotation {
     from {
       width: 0;
       transform: translateX(0px) rotate(0deg);
@@ -24,14 +28,30 @@
     transform: translateX(40%) rotate(360deg);
   }
 }
-  
+
+/* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 /* Anvender cursive font-family med en størrelse på 48 pixels og skjuler alt tekst, der går ud over elementets bredde */
 .skole-art {
   font-family: cursive; /* font-family: vælger en skrifttype til teksten */
   font-size: 48px; /* font-size: angiver størrelsen på teksten */
   overflow: hidden; /* overflow: skjuler alt indhold, der går ud over elementets grænser */
   white-space: nowrap; /* white-space: angiver, at teksten ikke skal brydes på flere linjer */
-  animation: handwriting 1s linear forwards; /* animation: anvender keyframe animationen med en varighed på 3 sekunder, lineær tidslinje og afslutter med elementets sidste tilstand */
+  animation: rotation 1s linear forwards; /* animation: anvender keyframe animationen med en varighed på 3 sekunder, lineær tidslinje og afslutter med elementets sidste tilstand */
 }
 
 .box {
@@ -44,4 +64,15 @@
 
 .box:active { /* Når du holder musen inde på boxen aktiveres den og bliver den angivne width/height */
   width:330px;
+}
+
+.tekst {
+  margin-left: 40%;
+  font-family: cursive;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 1s steps(100, end),
+    blink-caret .5s step-end infinite;
 }

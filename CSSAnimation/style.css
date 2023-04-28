@@ -30,10 +30,10 @@ body {
 
 @keyframes movebox {
   0% {
-    transform: translateX(0%) translateY(0%);
+    transform: translateX(0%) translateY(0%) rotate(0deg);
   } 
   to {
-    transform: translateX(300px) translateY(300px);
+    transform: translateX(300px) translateY(300px) rotate(360deg);
   }
 
 }

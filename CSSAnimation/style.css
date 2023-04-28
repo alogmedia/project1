@@ -5,7 +5,7 @@ body {
   background-color:bisque;
 }
 
-/* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% */
+/* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% og rotere elementet*/
 @keyframes rotation {
     from {
       width: 0;
@@ -17,17 +17,6 @@ body {
     }
 }
 
-/* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% */
-@keyframes moving {
-  from {
-    width: 0;
-    transform: translateX(0px) rotate(0deg);
-  }
-  to {
-    width: 100%;
-    transform: translateX(40%) rotate(360deg);
-  }
-}
 
 /* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% */
 @keyframes typing {
@@ -59,7 +48,10 @@ body {
   height: 10px;
   background-color: red; /* Giver en rød baggrund */
   margin-left: 40%;
-  transition: width 2s ease;
+  transition: width 2s ease; /* kan skrive sådan her for det giver lidt mere mening
+  transition-property: width;
+  transition-duration: 2s;
+  vi skriver det same bare på en linje. */
 }
 
 .box:active { /* Når du holder musen inde på boxen aktiveres den og bliver den angivne width/height */
@@ -73,6 +65,6 @@ body {
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 1s steps(100, end),
+    typing 4s steps(100, end),
     blink-caret .5s step-end infinite;
 }

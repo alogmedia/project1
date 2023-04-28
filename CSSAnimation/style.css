@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* CSS Document */
+
 /* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% */
 @keyframes handwriting {
     from {
@@ -8,6 +11,18 @@
       width: 100%;
       transform: translateX(40%) rotate(360deg);
     }
+}
+
+/* Definerer en keyframe animation, der gradvist øger elementets bredde fra 0% til 100% */
+@keyframes moving {
+  from {
+    width: 0;
+    transform: translateX(0px) rotate(0deg);
+  }
+  to {
+    width: 100%;
+    transform: translateX(40%) rotate(360deg);
+  }
 }
   
 /* Anvender cursive font-family med en størrelse på 48 pixels og skjuler alt tekst, der går ud over elementets bredde */
@@ -20,14 +35,13 @@
 }
 
 .box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  transition: width 1s ease-in;
+  width: 100px; /* width/height giver en bredde og højde på boxen */
+  height: 10px;
+  background-color: red; /* Giver en rød baggrund */
+  margin-left: 40%;
+  transition: width 2s ease;
 }
 
-.box:hover {
-  width:100%;
-  overflow: hidden;
-  background-color:blue;
+.box:active { /* Når du holder musen inde på boxen aktiveres den og bliver den angivne width/height */
+  width:330px;
 }

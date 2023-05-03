@@ -1,3 +1,8 @@
+@font-face  {
+  font-family:'colakind';
+  src: url(fonts/ColaKind.ttf);
+}
+
 body {
 	font-family: 'Helvetica Neue', sans-serif;
 	background-color: #f2f2f2;
@@ -27,6 +32,7 @@ body {
 .sitename {
 	color: #fff;
 	font-size:22px;
+  font-family: colakind;
 }
 
 .navigation.headmenu {

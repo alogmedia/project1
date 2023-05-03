@@ -1,6 +1,10 @@
+/* Her laver jeg en @font-face som specificere en custom font 
+jeg selv vælger hvad skal hedde og hvor man kan finde den */
 @font-face  {
-  font-family:'colakind';
-  src: url(fonts/ColaKind.ttf);
+  font-family:'colakind'; /* her kalder jeg den colakind
+  jeg kunne sagtens kalde den pepsikind, det ligemeget */
+  src: url(fonts/ColaKind.ttf); /* Her bruger jeg src til at fortælle hvor font filen ligger, 
+  ligesom når vi linker til et billede, der fortæller vi også hvor billedet er med src */
 }
 
 body {
@@ -32,7 +36,8 @@ body {
 .sitename {
 	color: #fff;
 	font-size:22px;
-  font-family: colakind;
+  font-family: colakind; /* Her fortæller jeg hvad font jeg vil bruge,
+  i dette tilfælde vil jeg bruge fonten vi definerede i toppen af .css filen */
 }
 
 .navigation.headmenu {

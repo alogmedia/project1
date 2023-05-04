@@ -108,6 +108,8 @@ ul.services li {
 	align-items: center;
 	padding: 0px, 5px, 0px, 0px;
 }
+
+
 section {
 	padding: 20px;
 	background-color: #fff;
@@ -124,66 +126,25 @@ section h2 {
 section p {
 	line-height: 1.5;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-}
+
 
 h2 {
   text-align: center;
   margin-bottom: 20px;
 }
-label {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 5px;
+
+#animation {
+  width: 140px;
+  height: 175px;
+  background-repeat: no-repeat;
+  background-image: url(/images/ab.png);
+  animation-name: play-animation;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-textarea {
-  resize: none;
-}
-
-button[type="submit"] {
-  background-color: #2c3e50;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #1abc9c;
-}
-
-@media (max-width: 767px) {
-	nav ul {
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-	}
-	
-	nav ul li {
-		margin: 10px 0;
-	}
-
+@keyframes play-animation {
+  from { background-position: 0px 0px; }
+  to { background-position: -1152px 0px; }
 }
